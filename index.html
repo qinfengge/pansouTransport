@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>CloudSync</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#2b8cee',
+                dark: '#1a6bbd',
+                soft: '#eef6ff',
+              },
+              background: {
+                light: '#f6f7f8',
+                dark: '#101922',
+              },
+              surface: {
+                light: '#ffffff',
+                dark: '#1e293b',
+              },
+              text: {
+                main: '#1e293b',
+                sub: '#64748b',
+              }
+            },
+            fontFamily: {
+              display: ['Space Grotesk', 'sans-serif'],
+              body: ['Noto Sans', 'sans-serif'],
+            },
+            animation: {
+              'float-up': 'float-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'fade-in': 'fade-in 0.3s ease-out forwards',
+            },
+            keyframes: {
+              'float-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px) scale(0.95)' },
+                '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+              },
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior-y: none;
+      }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+</head>
+  <body class="bg-background-light dark:bg-background-dark text-text-main dark:text-slate-100 font-body antialiased selection:bg-primary/30">
+    <div id="root"></div>
+  </body>
+</html>
